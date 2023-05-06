@@ -32,13 +32,14 @@ function clickFunction(event){
 }
 
 function sumSalary(){
+    
     let sal = Number($('#salary').val());
     sumTotal+=sal;
     console.log(sumTotal);//making sure my sumTotal calculator is working properly
-    if(sumTotal>20000){
+    if(sumTotal/12>20000){
         $('#totalSalary').css("background-color", "red");
     }
-    return sumTotal;
+    return sumTotal/12;
     
 
 }
