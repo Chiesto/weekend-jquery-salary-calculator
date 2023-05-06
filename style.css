@@ -1,0 +1,47 @@
+table{
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+.tRow{
+    width: 100px;
+    background-color: gray;
+    font-weight: bold;
+}
+#footer{
+    display: table-row-group;
+    height: 100px;
+    width: 100%;
+    background-color: bisque;
+}
+.inputs{
+    margin-right: 10px;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+#container input{
+    flex: 1;
+    
+}
+#submit-button{
+    margin-left: 10px;
+    margin-right:10px;
+    order:6;
+}
+#employees, #addemployee{
+    margin-bottom:10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#salarycalc{
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}

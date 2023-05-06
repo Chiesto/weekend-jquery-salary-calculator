@@ -10,36 +10,46 @@
     <title>Salary Calculator</title>
 </head>
 <body>
-    <form>
-        <input type="text" placeholder="First Name" id="firstname">
+    <div id="salarycalc">Salary Calculator</div>
+    <div id="addemployee">Add Employee</div>
+    <form id="container">
+        <input type="text" placeholder="First Name" id="firstname" class="inputs">
 
-        <input type="text" placeholder="Last Name" id="lastname">
+        <input type="text" placeholder="Last Name" id="lastname" class="inputs">
 
-        <input type="text" placeholder="ID" id="id">
+        <input type="text" placeholder="ID" id="id" class="inputs">
 
-        <input type="text" placeholder="Title" id="title">
+        <input type="text" placeholder="Title" id="title" class="inputs">
 
-        <input type="text" placeholder="Annual Salary" id="salary">
+        <input type="text" placeholder="Annual Salary" id="salary" class="inputs">
 
-        <button id="submit-button">Submit</button>
+        <button id="submit-button" class="inputs">Submit</button>
 
     </form>
-    <table id="table" border="1">
+    <div id="employees">Employees</div>
+    <table id="table">
         <thead>
             <tr>
-                <td>First Name</td>
-                <td>Last Name</td>
-                <td>ID</td>
-                <td>Title</td>
-                <td>Annual Salary</td>
-                <td>DELETE</td>
+                <td class="tRow">First Name</td>
+                <td class="tRow">Last Name</td>
+                <td class="tRow">ID</td>
+                <td class="tRow">Title</td>
+                <td class="tRow">Annual Salary</td>
+                <td class="tRow"></td>
+                
             </tr>
         </thead>
         <tbody id="table-row">
-            
+
         </tbody>
+        <tfoot id="footer">
+            <tr>
+                <td colspan="6">
+                    Total Monthly Cost: $<span id="totalSalary">0</span>
+                </td>
+            </tr>
+        </tfoot>
     </table>
-    Total Monthly Cost: $<span id="totalSalary">0</span>
     
 </body>
 </html>
