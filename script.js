@@ -36,14 +36,8 @@ function sumSalary(){
     sal = Number($('#salary').val());
     sumTotal+=sal;
     console.log(sumTotal);//making sure my sumTotal calculator is working properly
-    // if(sumTotal/12>20000){
-    //     $('#footer').css("background-color", "red");
-    // }
     let monthlyTotal = sumTotal/12;
-    // if(monthlyTotal<20,000){
-    //     $('#footer').css("background-color", "bisque");
-    //    }
-    colorChang(monthlyTotal)
+    colorChange(monthlyTotal)
     return monthlyTotal;
 
     
@@ -62,11 +56,13 @@ function removeRow(){
    console.log("in remove function",monthlyTotal);//making sure my remove function is activating properly. 
    
    let bleh = $('#totalSalary').text(monthlyTotal.toFixed(2));//set the value of my total monthly cost to the updated monthlyTotal fixed to 2 decimal places (wasn't sure if 2 decimals was required or not)
-   colorChang(bleh);
-   return bleh
+    //set made a variable so that i could change the color of the box and pass the value through my colorChange 
+    //function in order to change the color to red and back to the original based on if the monthly cost was over or under 20k.
+   colorChange(bleh);
+   return bleh;
 }
 
-function colorChang(monthlyTotal1){
+function colorChange(monthlyTotal1){
 
     if(monthlyTotal1<20000){
     $('#footer').css("background-color", "bisque");
